@@ -1,11 +1,16 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Button } from '../src/components/button';
-import button from '../src/components/button.scss';
-import index from '../src/index.scss';
+import '../src/index.scss';
 
-storiesOf('Button', module)
-  .add('with text', () => (
-    <Button className="button button--confirm" text="Подтвердить"/>
+storiesOf('Buttons', module)
+  .add('pure button', () => (
+    <Button title="Подтвердить"/>
+  ))
+  .add('login button', () => (
+    <Button modifiers={["login"]} title="Подтвердить"/>
+  ))
+  .add('confirm button', () => (
+    <Button modifiers={["confirm"]} title="Подтвердить"/>
   ))
   
