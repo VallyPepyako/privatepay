@@ -3,7 +3,7 @@ import React, { PureComponent } from 'react';
 export class Groups extends PureComponent {
   render() {
     return (
-      <div className="app">
+      <div>
         Groups
       </div>
     );
