@@ -1,9 +1,7 @@
 .button {
 	padding: 25px 50px;
-	border-radius: 42px;
 	font-family: sans-serif;
-	font-size: 38px;
-	font-weight: 400;
+	
 	text-transform: uppercase;
 	text-align: center;
 	outline: none;
@@ -16,7 +14,10 @@
 		color: var(--black-c);
 		background-color: var(--white-c);
 		transition: all .3s ease-out;
-		&:hover {
+		border-radius: 42px;
+		font-size: 38px;
+		font-weight: 400;
+		&:hover, &:focus {
 			opacity: .5;
 		}
 		&:active {
@@ -28,7 +29,10 @@
 		color: var(--white-c);
 		background: #000000 linear-gradient(to top, #1d2f9b 0%, #5ea3f0 100%);
 		transition: all .5s ease-out;
-		&:hover {
+		border-radius: 42px;
+		font-size: 38px;
+		font-weight: 400;
+		&:hover, &:focus {
 			opacity: .8;
 		}
 		&:active {
