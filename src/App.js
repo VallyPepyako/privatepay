@@ -3,21 +3,32 @@ import { Main } from './pages/Main';
 import { Groups } from './pages/Groups'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Sidebar from "react-sidebar";
+import Login from './containers/Login';
+import Registration from './containers/Registration';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      sidebarOpen: false
+      sidebarOpen: false,
+      isUserLogIn: false,
     };
     this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
+    this.login = this.login.bind(this);
   }
   onSetSidebarOpen(open) {
     this.setState({ sidebarOpen: open });
   }
+  login() {
+    this.setState({
+      isUserLogIn: true
+    })
+  }
   render() {
+    const {isUserLogIn} = this.state
+    
     return (
-      <Sidebar
+      isUserLogIn ? <Sidebar
         sidebar={<b>Sidebar content</b>}
         open={this.state.sidebarOpen}
         onSetOpen={this.onSetSidebarOpen}
@@ -40,7 +51,11 @@ class App extends Component {
           <Route exact path="/" component={Main} />
           <Route path="/Groups" component={Groups} />
       </Router>
-    </Sidebar>
+    </Sidebar> :
+      <div className="welcome-screen">
+        <Login login={this.login}/>
+        <Registration />
+      </div>
     );
   }
 }

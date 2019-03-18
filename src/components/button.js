@@ -3,6 +3,6 @@ import './button.scss'
 import { getClassName } from '../helpers';
 
 
-export const Button = ({ title, modifiers }) => (
-	<button className={getClassName('button', modifiers)}>{title}</button>
+export const Button = ({ title, modifiers, onClick }) => (
+	<button className={getClassName('button', modifiers)} onClick={(e) => onClick(e)}>{title}</button>
 )
