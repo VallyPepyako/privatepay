@@ -1,10 +1,10 @@
 import React, { PureComponent } from 'react'
 
-export default class Userlist extends PureComponent {
+export default class Login extends PureComponent {
 	render() {
 		return (
 			<div>
-				Userlist
+				 Login
 			</div>
 		)
 	}

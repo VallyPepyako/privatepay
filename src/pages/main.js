@@ -4,9 +4,7 @@ export class Main extends PureComponent {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-            Learn React
-        </header>
+        Главная страница
       </div>
     );
   }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Main } from './pages/main';
-import { Blog } from './pages/blog'
+import { Main } from './pages/Main';
+import { Groups } from './pages/Groups'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Sidebar from "react-sidebar";
 
@@ -38,7 +38,7 @@ class App extends Component {
           </ul>
 
           <Route exact path="/" component={Main} />
-          <Route path="/blog" component={Blog} />
+          <Route path="/Groups" component={Groups} />
       </Router>
     </Sidebar>
     );
