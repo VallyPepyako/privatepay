@@ -1,19 +1,20 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Button } from '../src/components/button';
+import { Footer } from '../src/components/footer';
 import '../src/index.scss';
 import profile, {ReactComponent as ProfileLogo} from '../src/static/icons/account.svg'
 
 storiesOf('Buttons', module)
   .add('pure button', () => (
-    <Button > 
+    <Button >
       Подтвердить
-    </Button> 
+    </Button>
   ))
   .add('login button', () => (
-    <Button modifiers={["login"]}> 
+    <Button modifiers={["login"]}>
       Подтвердить
-    </Button> 
+    </Button>
   ))
   .add('confirm button', () => (
     <Button modifiers={["confirm"]}>
@@ -26,3 +27,8 @@ storiesOf('Buttons', module)
       <ProfileLogo />
     </Button>
   ))
+
+storiesOf('Footer', module)
+    .add('standard', () => (
+        <Footer className="footer"/>
+    ))
