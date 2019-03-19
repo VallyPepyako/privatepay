@@ -1,0 +1,102 @@
+.card {
+	padding: 30px;
+	box-shadow: 0 10px 30px rgba(147, 147, 147, 0.3);
+	width: 90%;
+	&__logo {
+		max-width: 93px;
+		max-height: 96px;
+		margin-right: 45px;
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&__header {
+		display: flex;
+		margin-bottom: 30px;
+	}
+	&__title {
+		margin: 0;
+		font-size: 36px;
+		color: var(--light-black-c);
+	}
+	&__user-info {
+		color: var(--gray-c);
+		font-size: 30px;
+		font-weight: 400;
+		display: inline-block;
+		&:not(:last-of-type) {
+			margin-right: 25px;
+			&:after {
+				content: '';
+				background-color: var(--gray-c);
+				height: 5px;
+				width: 5px;
+				border-radius: 50%;
+				display: inline-block;
+				vertical-align: middle;
+				margin-left: 25px;
+			}
+		}
+	}
+	&__body {
+		padding: 0 10px;
+	}
+	&__text {
+		font-size: 30px;
+		font-weight: 400;
+		color: var(--light-black-c);
+		display: inline-block;
+		margin: 0;
+		margin-bottom: 30px;
+	}
+	&__link {
+		text-decoration: none;
+		color: var(--gray-c);
+		transition: opacity .3s ease-in;
+		&:hover {
+			opacity: .7;
+		}
+	}
+	&__rate {
+		display: flex;
+		align-items: flex-end;
+		vertical-align: bottom;
+		padding-left: 9px;
+	}
+	&__rate-btn {
+		padding: 0;
+		background: transparent url('../img/like.svg') center no-repeat;
+		height: 42px;
+		width:42px;
+		border: none;
+		outline: none;
+		line-height: 30px;
+		margin-right: 5px;
+		cursor: pointer;
+		&--dislike {
+			position: relative;
+			bottom: -10px;
+			transform: rotate(180deg);
+		}
+		&::-moz-focus-inner {
+			  border: 0;
+		}
+	}
+	&__num-rate {
+		font-size: 30px;
+		font-weight: 400;
+		color: var(--gray-c);
+		vertical-align: bottom;
+		&:not(:last-of-type) {
+			margin-right: 45px;
+		}
+	}
+	&__menu {
+		background:transparent url('../img/menu.svg') center no-repeat;
+		outline: none;
+		border: none;
+		height: 30px;
+		width: 40px;
+	}
+}
