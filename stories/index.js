@@ -11,17 +11,17 @@ storiesOf('Buttons', module)
     </Button> 
   ))
   .add('login button', () => (
-    <Button modifiers={"login"}> 
+    <Button modifiers="login"> 
       Подтвердить
     </Button> 
   ))
   .add('confirm button', () => (
-    <Button modifiers={"confirm"}>
+    <Button modifiers="confirm">
     Подтвердить
     </Button>
   ))
   .add('icon confirm button', () => (
-    <Button modifiers={"confirm"}>
+    <Button modifiers="confirm">
       Подтвердить
       <ProfileLogo />
     </Button>
