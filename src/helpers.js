@@ -1,5 +1,4 @@
 export const getClassName = (block, modifiers) => {
-		console.log('modifiers', modifiers)
 		if(modifiers) {
 			return block + modifiers.split(',').map(modifier => " " + block + "--" + modifier)
 		} else {
