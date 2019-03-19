@@ -1,3 +1,20 @@
+:root {
+  --white-c: #fff;
+  --black-c: 000;
+  --light-black-c: #363636;
+  --gray-c: #b9b9b9;
+  --to-blue-gradient: linear-gradient(to top, #1d2f9b 0%, #5ea3f0 100%);
+  --to-white-gradient: linear-gradient(to top, #5ea3f0 0%, #1d2f9b 100%);
+  --violet-c: #6b84a0;
+  --border-color: #e0e0e0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -12,3 +29,33 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+address,
+figure,
+pre,
+caption,
+label,
+legend,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+
