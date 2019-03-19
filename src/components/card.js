@@ -3,6 +3,7 @@ import './card.scss'
 
 export const Card = ({avatarUrl, cardTitle, cardText, cardPicture, timeOfActivity, numOfMembers, like, dislike}) => (
 	<div className="card">
+		<button className="card__menu menu"><span className="menu__icon"></span></button>
 			<div className="card__header">
 				<div className='card__logo'>
 					<img src={avatarUrl} alt="user avatar"></img>
@@ -12,7 +13,6 @@ export const Card = ({avatarUrl, cardTitle, cardText, cardPicture, timeOfActivit
 					<span className="card__user-info card__user-info--time-online">{ timeOfActivity }</span>
 					<span className="card__user-info card__user-info--num-of-member">{ numOfMembers }</span>
 				</div>
-				<button className="card__menu menu"><span className="menu__icon"></span></button>
 			</div>
 			<div className="card__body">
 				<p className="card__text"> { cardText } <a href="#" className="card__link card__link--more">Ещё</a> </p>
