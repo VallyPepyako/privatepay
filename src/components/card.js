@@ -1,5 +1,6 @@
 import React from 'react'
 import './card.scss'
+import like, {ReactComponent as LikeIcon} from '../static/icons/like.svg'
 
 export const Card = ({avatarUrl, cardTitle, cardText, cardPicture, timeOfActivity, numOfMembers, like, dislike}) => (
 	<div className="card">
@@ -18,8 +19,12 @@ export const Card = ({avatarUrl, cardTitle, cardText, cardPicture, timeOfActivit
 				<p className="card__text"> { cardText } <a href="#" className="card__link card__link--more">Ещё</a> </p>
 			</div>
 			<div className="card__rate">
-				<button className="card__rate-btn card__rate-btn--like"></button><span className="card__num-rate">{ like }</span>
-				<button className="card__rate-btn card__rate-btn--dislike"></button><span className="card__num-rate">{ dislike }</span>
+				<button className="card__rate-btn card__rate-btn--like like">
+					<LikeIcon className='like-ikon' />
+				</button><span className="card__num-rate">{ like }</span>
+				<button className="card__rate-btn card__rate-btn--dislike dislike">
+					<LikeIcon className='like-ikon' />
+				</button><span className="card__num-rate">{ dislike }</span>
 			</div>
 	</div>
 )

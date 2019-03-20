@@ -67,17 +67,23 @@
 	}
 	&__rate-btn {
 		padding: 0;
-		background: transparent url('../img/like.svg') center no-repeat;
 		height: 42px;
 		width:42px;
 		border: none;
 		outline: none;
-		line-height: 30px;
 		margin-right: 5px;
 		cursor: pointer;
+		background-color: transparent;
+		&:hover {
+			transition: all .3s;
+			.like-icon {
+				fill: red;
+				color: red;
+			}
+		}
 		&--dislike {
 			position: relative;
-			bottom: -10px;
+			bottom: -7px;
 			transform: rotate(180deg);
 		}
 		&::-moz-focus-inner {
@@ -94,7 +100,6 @@
 		}
 	}
 	&__menu {
-		background:transparent url('../img/menu.svg') center no-repeat;
 		outline: none;
 		border: none;
 		height: 30px;
