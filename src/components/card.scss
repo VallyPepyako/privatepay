@@ -66,7 +66,7 @@
 	}
 	&__rate-btn {
 		padding: 0;
-		background: transparent url('../static/icons/like.svg') center no-repeat;
+		background: transparent url('../img/like.svg') center no-repeat;
 		height: 42px;
 		width:42px;
 		border: none;
@@ -93,6 +93,7 @@
 		}
 	}
 	&__menu {
+		background:transparent url('../img/menu.svg') center no-repeat;
 		outline: none;
 		border: none;
 		height: 30px;
