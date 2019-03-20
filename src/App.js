@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
-import { Main } from './pages/Main';
-import { Groups } from './pages/Groups'
+import main from './pages/Main';
+import groups from './pages/Groups'
+import user from './pages/User'
+
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Sidebar from "react-sidebar";
 import Login from './containers/Login';
 import Registration from './containers/Registration';
+import { Footer } from './components/footer';
 
 class App extends Component {
   constructor(props) {
@@ -35,21 +38,14 @@ class App extends Component {
         pullRight={true}
         styles={{ sidebar: { background: "white" } }}
       >
-        <button onClick={() => this.onSetSidebarOpen(true)}>
-          Open sidebar
-        </button>
-        <Router>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/blog">blog</Link>
-            </li>
-          </ul>
-
-          <Route exact path="/" component={Main} />
-          <Route path="/Groups" component={Groups} />
+      <button onClick={() => this.onSetSidebarOpen(true)}>
+        Open sidebar
+      </button>
+      <Router>
+        <Route exact path="/" component={main} />
+        <Route path="/groups" component={groups} />
+        <Route path="/user" component={user} />
+        <Footer />
       </Router>
     </Sidebar> :
       <div className="welcome-screen">

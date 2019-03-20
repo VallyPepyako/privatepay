@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { Button } from '../src/components/button';
 import { Footer } from '../src/components/footer';
 import { Card } from '../src/components/card';
+import { BrowserRouter as Router} from "react-router-dom";
 import '../src/index.scss';
 import profile, {ReactComponent as ProfileLogo} from '../src/static/icons/account.svg'
 
@@ -32,7 +33,9 @@ storiesOf('Buttons', module)
 
 storiesOf('Footer', module)
     .add('standard', () => (
+      <Router>
         <Footer className="footer"/>
+      </Router>
     ))
 
 storiesOf('Card', module)
