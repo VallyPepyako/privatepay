@@ -1,6 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Button } from '../src/components/button';
+import { Footer } from '../src/components/footer';
 import { Card } from '../src/components/card';
 import '../src/index.scss';
 import profile, {ReactComponent as ProfileLogo} from '../src/static/icons/account.svg'
@@ -8,14 +9,14 @@ import profile, {ReactComponent as ProfileLogo} from '../src/static/icons/accoun
 
 storiesOf('Buttons', module)
   .add('pure button', () => (
-    <Button > 
+    <Button >
       Подтвердить
-    </Button> 
+    </Button>
   ))
   .add('login button', () => (
-    <Button modifiers="login"> 
+    <Button modifiers="login">
       Подтвердить
-    </Button> 
+    </Button>
   ))
   .add('confirm button', () => (
     <Button modifiers="confirm">
@@ -28,6 +29,12 @@ storiesOf('Buttons', module)
       <ProfileLogo />
     </Button>
   ))
+
+storiesOf('Footer', module)
+    .add('standard', () => (
+        <Footer className="footer"/>
+    ))
+
 storiesOf('Card', module)
 	.add('card', () => (
 		<Card avatarUrl = 'https://avatarko.ru/img/kartinka/1/multfilm_gomer.png'
@@ -36,6 +43,6 @@ storiesOf('Card', module)
 					timeOfActivity = '5 минут'
 					numOfMembers = '41 член'
 					like = '22'
-					dislike = '41' /> 
+					dislike = '41' />
 
 	))

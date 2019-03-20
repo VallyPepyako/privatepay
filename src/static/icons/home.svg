@@ -1,0 +1,7 @@
+<svg width="24" heigh="24" viewBox="0 0 24 24">
+    <linearGradient id="gradient-vertical" x2="0" y2="1" style="display: inline-block">
+        <stop offset="0%" stop-color="#1d2f9b" />
+        <stop offset="100%" stop-color="#5ea3f0" />
+    </linearGradient>
+    <path fill="#000000" d="M9,19V13H11L13,13H15V19H18V10.91L12,4.91L6,10.91V19H9M12,2.09L21.91,12H20V21H13V15H11V21H4V12H2.09L12,2.09Z" />
+</svg>
