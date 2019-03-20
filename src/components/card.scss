@@ -1,11 +1,12 @@
 .card {
-	padding: calc(15px / 2);
+	padding: 8px;
 	box-shadow: 0 5px 15px rgba(147, 147, 147, 0.3);
 	width: 90%;
+	margin: 0 auto;
 	position: relative;
 	&__logo {
 		max-width: 47px;
-		max-height: 48px;
+		max-height: 40px;
 		margin-right: 45px;
 		border-radius: 50%;
 		img {
@@ -16,42 +17,42 @@
 	}
 	&__header {
 		display: flex;
-		margin-bottom: calc(30px / 2);
+		margin-bottom: 15px;
 	}
 	&__title {
 		margin: 0;
-		font-size: calc(36px / 2);
+		font-size: 18px;
 		color: var(--light-black-c);
 	}
 	&__user-info {
 		color: var(--gray-c);
-		font-size: calc(30px / 2);
+		font-size: 15px;
 		font-weight: 400;
 		display: inline-block;
 		&:not(:last-of-type) {
-			margin-right: calc(25px / 2);
+			margin-right: 13px;
 			&:after {
 				content: '';
 				background-color: var(--gray-c);
-				height:calc( 5px / 2);
-				width:calc( 5px / 2);
+				height:5px;
+				width:5px;
 				border-radius: 50%;
 				display: inline-block;
 				vertical-align: middle;
-				margin-left: calc(25px / 2);
+				margin-left: 25px;
 			}
 		}
 	}
 	&__body {
-		padding: 0 calc(10px / 2);
+		padding: 0 5px;
 	}
 	&__text {
-		font-size: calc(30px / 2);
+		font-size: 15px;
 		font-weight: 400;
 		color: var(--light-black-c);
 		display: inline-block;
 		margin: 0;
-		margin-bottom: calc(30px / 2);
+		margin-bottom: 15px;
 	}
 	&__link {
 		text-decoration: none;
@@ -64,15 +65,15 @@
 	&__rate {
 		display: flex;
 		align-items: center;
-		padding-left:calc( 9px / 2);
+		padding-left: 5px
 	}
 	&__rate-btn {
 		padding: 0;
-		height: calc(42px / 2);
-		width:calc(42px / 2);
+		height: 30px;
+		width: 30px;
 		border: none;
 		outline: none;
-		margin-right:calc( 5px / 2);
+		margin-right: 5px;
 		cursor: pointer;
 		background-color: transparent;
 		fill: var(--violet-c);
@@ -82,7 +83,6 @@
 		}
 		&--dislike {
 			position: relative;
-			bottom: -2px;
 			transform: rotate(180deg);
 		}
 		&::-moz-focus-inner {
@@ -90,19 +90,19 @@
 		}
 	}
 	&__num-rate {
-		font-size: calc(30px / 2);
+		font-size: 15px;
 		font-weight: 400;
 		color: var(--gray-c);
 		vertical-align: bottom;
 		&:not(:last-of-type) {
-			margin-right: calc(45px / 2);
+			margin-right: 25px;
 		}
 	}
 	&__menu {
 		outline: none;
 		border: none;
-		height: calc(30px / 2);
-		width: calc(40px / 2);
+		height: 15px;
+		width: 15px;
 		background-color: transparent;
 		padding: 0;
 		display: flex;
@@ -110,7 +110,7 @@
 		align-items: center;
 		position: absolute;
 		right: 5px;
-		top: 5px;
+		top: 10px;
 		cursor: pointer;
 	}
 	.menu {
