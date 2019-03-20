@@ -2,6 +2,7 @@
 	padding: 30px;
 	box-shadow: 0 10px 30px rgba(147, 147, 147, 0.3);
 	width: 90%;
+	position: relative;
 	&__logo {
 		max-width: 93px;
 		max-height: 96px;
@@ -98,5 +99,42 @@
 		border: none;
 		height: 30px;
 		width: 40px;
+		background-color: transparent;
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		right: 0;
+		top: 0;
+		cursor: pointer;
+	}
+	.menu {
+		&__icon {
+			display: inline-block;
+			background-color: var(--gray-c);
+			height: 5px;
+			width: 5px;
+			border-radius: 50%;
+			position: relative;
+			&:after, 
+			&:before {
+				display: inline-block;
+				content: '';
+				position: absolute;
+				height: 5px;
+				width: 5px;
+				border-radius: 50%;
+				background-color: var(--gray-c);
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			&:before {
+				top: -7px;
+			}
+			&:after {
+				bottom: -7px;
+			}
+		}
 	}
 }
