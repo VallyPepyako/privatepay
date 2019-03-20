@@ -7,9 +7,11 @@
 		max-width: 93px;
 		max-height: 96px;
 		margin-right: 45px;
+		border-radius: 50%;
 		img {
 			width: 100%;
 			height: 100%;
+			border-radius: 50%;
 		}
 	}
 	&__header {
@@ -74,13 +76,10 @@
 		margin-right: 5px;
 		cursor: pointer;
 		background-color: transparent;
-		fill: red;
+		fill: var(--violet-c);
+		transition: all .3s;
 		&:hover {
-			transition: all .3s;
-			.like-icon {
-				fill: red;
-				color: red;
-			}
+			fill: var(--blue);
 		}
 		&--dislike {
 			position: relative;
