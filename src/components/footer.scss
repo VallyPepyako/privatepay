@@ -38,12 +38,12 @@
     fill: var(--gray-c);
   }
 
-  &--active,
+  .footer__nav-item--active &,
   &:hover {
-    fill: blue;
+    fill: url(#gradient-vertical) gray;
 
     path {
-      fill: blue;
+      fill: url(#gradient-vertical) gray;
     }
   }
 }

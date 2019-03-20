@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './footer.scss';
-import { Main } from '../pages/main';
+import { Main } from '../pages/Main';
 import { Groups } from '../pages/Groups'
 import { User } from '../pages/User'
 import home, {ReactComponent as HomeIcon} from '../static/icons/home.svg'
@@ -13,7 +13,7 @@ export const Footer = () => (
         <footer className="footer">
             <nav className="footer__nav">
                 <ul className="footer__nav-list">
-                    <li className="footer__nav-item">
+                    <li className="footer__nav-item footer__nav-item--active">
                         <Link to="/Groups" className="footer__nav-link" aria-label="Groups">
                             <GroupsIcon className="footer__nav-icon"/>
                         </Link>
