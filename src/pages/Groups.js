@@ -1,10 +1,10 @@
 import React, { PureComponent } from 'react';
 
-export class Main extends PureComponent {
+export class Groups extends PureComponent {
   render() {
     return (
       <div>
-        Главная страница
+        Groups
       </div>
     );
   }
