@@ -29,21 +29,19 @@
   align-items: center;
   width: 50px;
   height: 50px;
+  &:hover, &--active {
+    .footer__nav-icon {
+      fill: url(#gradient-vertical) gray;
+      path {
+        fill: url(#gradient-vertical) gray;
+      }
+    }
+  }
 }
 
 .footer__nav-icon {
   fill: var(--gray-c);
-
   path {
     fill: var(--gray-c);
-  }
-
-  .footer__nav-item--active &,
-  &:hover {
-    fill: url(#gradient-vertical) gray;
-
-    path {
-      fill: url(#gradient-vertical) gray;
-    }
   }
 }
