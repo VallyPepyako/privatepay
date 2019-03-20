@@ -1,0 +1,36 @@
+$input-search-height: 30px;
+$input-login-height: 42px;
+
+.input {
+	display: block;
+	height: 30px;
+	padding: 4px 10px;
+	background-color: var(--white-c);
+	border: 1px solid transparent;
+	border-radius: 5px;
+	appearance: none;
+
+	&::placeholder,
+	&::-webkit-input-placeholder {
+		color: var(--gray-c);
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	&--search {
+		border-color: var(--gray-c);
+		height: $input-search-height;
+		text-align: center;
+	}
+	&--login {
+		width: 100%;
+		height: $input-login-height;
+		border-radius: ($input-login-height/2);
+		color: var(--gray-c);
+		text-align: center;
+		background-color: #284688;
+		border-color: #284688;
+	}
+}
