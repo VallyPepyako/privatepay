@@ -1,11 +1,11 @@
 .card {
-	padding: 30px;
-	box-shadow: 0 10px 30px rgba(147, 147, 147, 0.3);
+	padding: calc(15px / 2);
+	box-shadow: 0 5px 15px rgba(147, 147, 147, 0.3);
 	width: 90%;
 	position: relative;
 	&__logo {
-		max-width: 93px;
-		max-height: 96px;
+		max-width: 47px;
+		max-height: 48px;
 		margin-right: 45px;
 		border-radius: 50%;
 		img {
@@ -16,42 +16,42 @@
 	}
 	&__header {
 		display: flex;
-		margin-bottom: 30px;
+		margin-bottom: calc(30px / 2);
 	}
 	&__title {
 		margin: 0;
-		font-size: 36px;
+		font-size: calc(36px / 2);
 		color: var(--light-black-c);
 	}
 	&__user-info {
 		color: var(--gray-c);
-		font-size: 30px;
+		font-size: calc(30px / 2);
 		font-weight: 400;
 		display: inline-block;
 		&:not(:last-of-type) {
-			margin-right: 25px;
+			margin-right: calc(25px / 2);
 			&:after {
 				content: '';
 				background-color: var(--gray-c);
-				height: 5px;
-				width: 5px;
+				height:calc( 5px / 2);
+				width:calc( 5px / 2);
 				border-radius: 50%;
 				display: inline-block;
 				vertical-align: middle;
-				margin-left: 25px;
+				margin-left: calc(25px / 2);
 			}
 		}
 	}
 	&__body {
-		padding: 0 10px;
+		padding: 0 calc(10px / 2);
 	}
 	&__text {
-		font-size: 30px;
+		font-size: calc(30px / 2);
 		font-weight: 400;
 		color: var(--light-black-c);
 		display: inline-block;
 		margin: 0;
-		margin-bottom: 30px;
+		margin-bottom: calc(30px / 2);
 	}
 	&__link {
 		text-decoration: none;
@@ -63,17 +63,16 @@
 	}
 	&__rate {
 		display: flex;
-		align-items: flex-end;
-		vertical-align: bottom;
-		padding-left: 9px;
+		align-items: center;
+		padding-left:calc( 9px / 2);
 	}
 	&__rate-btn {
 		padding: 0;
-		height: 42px;
-		width:42px;
+		height: calc(42px / 2);
+		width:calc(42px / 2);
 		border: none;
 		outline: none;
-		margin-right: 5px;
+		margin-right:calc( 5px / 2);
 		cursor: pointer;
 		background-color: transparent;
 		fill: var(--violet-c);
@@ -83,7 +82,7 @@
 		}
 		&--dislike {
 			position: relative;
-			bottom: -7px;
+			bottom: -2px;
 			transform: rotate(180deg);
 		}
 		&::-moz-focus-inner {
@@ -91,27 +90,27 @@
 		}
 	}
 	&__num-rate {
-		font-size: 30px;
+		font-size: calc(30px / 2);
 		font-weight: 400;
 		color: var(--gray-c);
 		vertical-align: bottom;
 		&:not(:last-of-type) {
-			margin-right: 45px;
+			margin-right: calc(45px / 2);
 		}
 	}
 	&__menu {
 		outline: none;
 		border: none;
-		height: 30px;
-		width: 40px;
+		height: calc(30px / 2);
+		width: calc(40px / 2);
 		background-color: transparent;
 		padding: 0;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		position: absolute;
-		right: 0;
-		top: 0;
+		right: 5px;
+		top: 5px;
 		cursor: pointer;
 	}
 	.menu {
