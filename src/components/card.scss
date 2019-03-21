@@ -84,14 +84,15 @@
 			&:hover {
 				fill: url(#icon-gradient);
 			}
-			&--180-deg {
-				position: relative;
-				transform: rotate(180deg);
-			}
 			&::-moz-focus-inner {
 				  border: 0;
 			}
-		}
+			&--180deg {
+				position: relative;
+				transform: rotate(180deg);
+			}
+		}	
+					
 		&__rate {
 			font-size: 15px;
 			font-weight: 400;
