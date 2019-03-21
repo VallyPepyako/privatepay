@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { Button } from '../src/components/button';
 import { Footer } from '../src/components/footer';
 import { Card } from '../src/components/card';
+import { Input } from '../src/components/input';
 import { BrowserRouter as Router} from "react-router-dom";
 import '../src/index.scss';
 import profile, {ReactComponent as ProfileLogo} from '../src/static/icons/account.svg'
@@ -49,3 +50,29 @@ storiesOf('Card', module)
 					dislike = '41' />
 
 	))
+
+storiesOf('Input', module)
+    .add('text', () => (
+        <Input type="text"
+               placeholder="текст"
+        />
+    ))
+    .add('search', () => (
+        <Input type="search"
+               placeholder="поиск"
+               modifiers="search"
+        />
+    ))
+    .add('e-mail', () => (
+        <Input type="e-mail"
+               placeholder="логин"
+               modifiers="login"
+        />
+    ))
+    .add('password', () => (
+        <Input type="password"
+               placeholder="пароль"
+               modifiers="login"
+        />
+    ))
+
