@@ -50,3 +50,4 @@ storiesOf('Card', module)
 					dislike = '41' />
 
 	))
+

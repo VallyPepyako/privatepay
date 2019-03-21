@@ -17,7 +17,7 @@ export const Card = ({avatarUrl, cardTitle, cardText, cardPicture, timeOfActivit
 			</div>
 		</div>
 		<div className="card__body">
-		<img src= {cardPicture} alt="card picture" className="card__picture"/>
+		{cardPicture && <img src= {cardPicture} alt="card picture" className="card__picture"/>}
 			<p className="card__text"> { cardText } <a href="#" className="card__link card__link--more">Ещё</a> </p>
 		</div>
 		<div className="card__voting voting">

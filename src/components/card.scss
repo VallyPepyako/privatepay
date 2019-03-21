@@ -50,11 +50,12 @@
 	&__body {
 		padding: 0 5px;
 		display: flex;
+		margin-bottom: 30px;
 	}
 	&__picture {
 		max-width: 30%;
+		float: right;
 		margin-right: 20px;
-		margin-bottom: 30px;
 	}
 	&__text {
 		font-size: 15px;
