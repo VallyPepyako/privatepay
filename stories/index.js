@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { Button } from '../src/components/button';
 import { Footer } from '../src/components/footer';
 import { Card } from '../src/components/card';
+import { SocialBlock } from '../src/components/social-block'
 import { BrowserRouter as Router} from "react-router-dom";
 import '../src/index.scss';
 import profile, {ReactComponent as ProfileLogo} from '../src/static/icons/account.svg'
@@ -51,3 +52,9 @@ storiesOf('Card', module)
 
 	))
 
+storiesOf('SocialBlock', module)
+  .add('block-link', () => (
+      <Router>
+        <SocialBlock />
+      </Router>
+    ))

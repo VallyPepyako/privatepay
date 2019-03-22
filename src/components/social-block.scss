@@ -1,0 +1,41 @@
+.links-block {
+	list-style: none;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 0 20px;
+	min-height: 55px;
+	&__item {
+		padding: 2px;
+		border-radius: 50%;
+		text-align: center;
+		height: 23px;
+		width: 23px;
+		display: flex;
+		justify-content: center;
+		fill: #fff;
+		svg {
+			height: 90%;
+			width: 90%;
+			margin:0 auto;
+		}
+		&--facebook {
+			background-color: var(--dark-violet-c);
+		}
+		&--linkedin {
+			background-color: var(--light-blue-c);
+		}
+		&--twitter {
+			background-color: var(--lighter-blue-c);
+		}
+		&--vk {
+			background-color: var(--light-violet-c);
+		}
+	}
+	&__link {
+		display: inline-block;
+		height: 100%;
+		text-decoration: none;
+		text-align: center;		
+	}
+}
