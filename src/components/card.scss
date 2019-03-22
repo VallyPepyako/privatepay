@@ -1,38 +1,45 @@
 .card {
-	padding: 30px;
-	box-shadow: 0 10px 30px rgba(147, 147, 147, 0.3);
+	padding: 8px;
+	box-shadow: 0 5px 15px rgba(147, 147, 147, 0.3);
 	width: 90%;
+	margin: 0 auto;
 	position: relative;
+	&__menu-button {
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		background-color: transparent;
+		padding: 0 5px;
+	}
 	&__logo {
-		max-width: 93px;
-		max-height: 96px;
+		width: 45px;
+		height: 45px;
 		margin-right: 45px;
-		img {
-			width: 100%;
-			height: 100%;
-		}
+		background-size: contain;
+		background-repeat: no-repeat;
+		border-radius: 50%;
 	}
 	&__header {
 		display: flex;
-		margin-bottom: 30px;
+		margin-bottom: 15px;
 	}
 	&__title {
 		margin: 0;
-		font-size: 36px;
+		font-size: 18px;
 		color: var(--light-black-c);
 	}
-	&__user-info {
+	&__blog-info {
 		color: var(--gray-c);
-		font-size: 30px;
+		font-size: 15px;
 		font-weight: 400;
 		display: inline-block;
 		&:not(:last-of-type) {
-			margin-right: 25px;
+			margin-right: 13px;
 			&:after {
 				content: '';
 				background-color: var(--gray-c);
-				height: 5px;
-				width: 5px;
+				height:5px;
+				width:5px;
 				border-radius: 50%;
 				display: inline-block;
 				vertical-align: middle;
@@ -41,15 +48,21 @@
 		}
 	}
 	&__body {
-		padding: 0 10px;
+		padding: 0 5px;
+		display: flex;
+		margin-bottom: 30px;
+	}
+	&__picture {
+		max-width: 30%;
+		float: right;
+		margin-right: 20px;
 	}
 	&__text {
-		font-size: 30px;
+		font-size: 15px;
 		font-weight: 400;
 		color: var(--light-black-c);
 		display: inline-block;
 		margin: 0;
-		margin-bottom: 30px;
 	}
 	&__link {
 		text-decoration: none;
@@ -59,80 +72,40 @@
 			opacity: .7;
 		}
 	}
-	&__rate {
+	.voting {
 		display: flex;
-		align-items: flex-end;
-		vertical-align: bottom;
-		padding-left: 9px;
-	}
-	&__rate-btn {
-		padding: 0;
-		background: transparent url('../static/icons/like.svg') center no-repeat;
-		height: 42px;
-		width:42px;
-		border: none;
-		outline: none;
-		line-height: 30px;
-		margin-right: 5px;
-		cursor: pointer;
-		&--dislike {
-			position: relative;
-			bottom: -10px;
-			transform: rotate(180deg);
-		}
-		&::-moz-focus-inner {
-			  border: 0;
-		}
-	}
-	&__num-rate {
-		font-size: 30px;
-		font-weight: 400;
-		color: var(--gray-c);
-		vertical-align: bottom;
-		&:not(:last-of-type) {
-			margin-right: 45px;
-		}
-	}
-	&__menu {
-		outline: none;
-		border: none;
-		height: 30px;
-		width: 40px;
-		background-color: transparent;
-		padding: 0;
-		display: flex;
-		justify-content: center;
 		align-items: center;
-		position: absolute;
-		right: 0;
-		top: 0;
-		cursor: pointer;
-	}
-	.menu {
-		&__icon {
-			display: inline-block;
-			background-color: var(--gray-c);
-			height: 5px;
-			width: 5px;
-			border-radius: 50%;
-			position: relative;
-			&:after, 
-			&:before {
-				display: inline-block;
-				content: '';
-				position: absolute;
-				height: 5px;
-				width: 5px;
-				border-radius: 50%;
-				background-color: var(--gray-c);
-				left: 50%;
-				transform: translateX(-50%);
+		padding-left: 5px;
+		&__button {
+			padding: 0;
+			height: 30px;
+			width: 30px;
+			border: none;
+			outline: none;
+			margin-right: 5px;
+			cursor: pointer;
+			background-color: transparent;
+			fill: var(--violet-c);
+			transition: all .3s;
+			&:hover {
+				fill: url(#icon-gradient);
 			}
-			&:before {
-				top: -7px;
+			&::-moz-focus-inner {
+				  border: 0;
 			}
-			&:after {
-				bottom: -7px;
+			&--180deg {
+				position: relative;
+				transform: rotate(180deg);
+			}
+		}	
+					
+		&__rate {
+			font-size: 15px;
+			font-weight: 400;
+			color: var(--gray-c);
+			vertical-align: bottom;
+			&:not(:last-of-type) {
+				margin-right: 25px;
 			}
 		}
 	}
