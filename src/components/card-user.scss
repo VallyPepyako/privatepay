@@ -1,0 +1,31 @@
+.card-user {
+	padding: 10px 15px;
+	border-bottom: 1px solid var(--border-color);
+
+/*	&:last-child {
+		border-bottom: none;
+	}*/
+}
+.card-user__link {
+	display: flex;
+	align-items: center;
+	color: var(--black-c);
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		color: var(--black-c);
+	}
+}
+.card-user__avatar {
+	margin-right: 10px;
+}
+.card-user__title {
+	margin-right: 20px;
+	font-size: 16px;
+	font-weight: normal;
+}
+.card-user__icon {
+	margin-left: auto;
+	fill: var(--gray-c);
+}
