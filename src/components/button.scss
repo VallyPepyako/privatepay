@@ -1,5 +1,5 @@
 .button {
-	padding: 25px 50px;
+	padding: 12px 25px;
 	font-family: sans-serif;
 	
 	text-transform: uppercase;
@@ -11,11 +11,12 @@
 		  border: 0;
 	}
 	&--login {
+		width: 100%;
 		color: var(--black-c);
 		background-color: var(--white-c);
 		transition: all .3s ease-out;
 		border-radius: 42px;
-		font-size: 38px;
+		font-size: 16px;
 		font-weight: 400;
 		&:hover, &:focus {
 			opacity: .5;
