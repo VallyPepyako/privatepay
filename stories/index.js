@@ -3,9 +3,12 @@ import { storiesOf } from '@storybook/react';
 import { Button } from '../src/components/button';
 import { Footer } from '../src/components/footer';
 import { Card } from '../src/components/card';
+import { Input } from '../src/components/input';
+import { Avatar } from '../src/components/avatar';
 import { BrowserRouter as Router} from "react-router-dom";
 import '../src/index.scss';
 import profile, {ReactComponent as ProfileLogo} from '../src/static/icons/account.svg'
+import {CardUser} from "../src/components/cardUser";
 
 
 storiesOf('Buttons', module)
@@ -49,3 +52,64 @@ storiesOf('Card', module)
 					dislike = '41' />
 
 	))
+
+storiesOf('Input', module)
+    .add('text', () => (
+        <Input type="text"
+               placeholder="текст"
+        />
+    ))
+    .add('search', () => (
+        <Input type="search"
+               placeholder="поиск"
+               modifiers="search"
+        />
+    ))
+    .add('e-mail', () => (
+        <Input type="e-mail"
+               placeholder="логин"
+               modifiers="login"
+        />
+    ))
+    .add('password', () => (
+        <Input type="password"
+               placeholder="пароль"
+               modifiers="login"
+        />
+    ))
+
+storiesOf('Avatar', module)
+    .add('small', () => (
+        <Avatar
+            avatarUrl="https://via.placeholder.com/32x32"
+            avatarUrl2x="https://via.placeholder.com/64x64"
+            modifiers="small"
+            alt="alt"
+        />
+    ))
+    .add('medium', () => (
+        <Avatar
+            avatarUrl="https://via.placeholder.com/50x50"
+            avatarUrl2x="https://via.placeholder.com/100x100"
+            modifiers="medium"
+            al
+        />
+    ))
+    .add('large', () => (
+        <Avatar
+            avatarUrl="https://via.placeholder.com/100x100"
+            avatarUrl2x="https://via.placeholder.com/200x200"
+            modifiers="large"
+        />
+    ))
+
+storiesOf('Card User', module)
+    .add('simple', () => (
+        <CardUser
+            avatarUrl="https://via.placeholder.com/32x32"
+            avatarUrl2x="https://via.placeholder.com/64x64"
+            userName="User Name"
+            userLink="./User"
+        />
+    ))
+
