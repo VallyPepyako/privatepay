@@ -1,23 +1,25 @@
 .button {
 	padding: 12px 25px;
 	font-family: sans-serif;
-	
-	text-transform: uppercase;
 	text-align: center;
 	outline: none;
 	border: none;
 	cursor: pointer;
+
 	&::-moz-focus-inner {
 		  border: 0;
 	}
 	&--login {
 		width: 100%;
+		padding: 12px 25px;
 		color: var(--black-c);
 		background-color: var(--white-c);
 		transition: all .3s ease-out;
 		border-radius: 42px;
 		font-size: 16px;
 		font-weight: 400;
+		text-transform: uppercase;
+
 		&:hover, &:focus {
 			opacity: .5;
 		}
@@ -33,11 +35,18 @@
 		border-radius: 42px;
 		font-size: 38px;
 		font-weight: 400;
+		text-transform: uppercase;
+
 		&:hover, &:focus {
 			opacity: .8;
 		}
 		&:active {
 			background : linear-gradient(to top, #5ea3f0 0%, #1d2f9b 100%);
 		}
+	}
+	&--link {
+		padding: 0;
+		background-color: transparent;
+		text-decoration: underline;
 	}
 }

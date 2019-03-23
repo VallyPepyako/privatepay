@@ -92,23 +92,18 @@ input::-webkit-contacts-auto-fill-button {
   right: 0;
 }
 
+.color-white {
+  color: white;
+}
+
 .welcome-screen {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   height: 100vh;
+  width: 100vw;
   padding: 20px;
   background: var(--to-blue-gradient);
 }
-.login-block {
-  width: 100%;
-  flex-grow: 1;
-  flex-shrink: 0;
-  max-width: 270px;
-}
-.form-login__input {
-  margin-bottom: 25px;
-}
-.form-login__submit {
-  margin-top: 50px;
-}
+
