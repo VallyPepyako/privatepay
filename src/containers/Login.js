@@ -7,6 +7,7 @@ export default class Login extends PureComponent {
 		return (
 			<div>
 				 <Button modifiers="login" onClick={this.props.login}>login</Button>
+				 <Button modifiers="link" onClick={this.props.showRegestraion}>regestration</Button>
 			</div>
 		)
 	}
