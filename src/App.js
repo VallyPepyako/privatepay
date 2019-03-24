@@ -17,7 +17,7 @@ class App extends Component {
     super(props);
     this.state = {
       sidebarOpen: false,
-      isUserLogIn: true,
+      isUserLogIn: false,
       isRegistarationActive: false,
     };
     this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
@@ -34,7 +34,7 @@ class App extends Component {
   }
   showRegestraion() {
     this.setState({
-      isRegistarationActive: true
+      isRegistarationActive: !this.state.isRegistarationActive
     })
   }
   render() {
@@ -65,7 +65,7 @@ class App extends Component {
       <div className="welcome-screen">
       {!isRegistarationActive 
         ?<Login login={this.login} showRegestraion={this.showRegestraion}/>
-        : <Registration />
+        : <Registration login={this.login} showRegestraion={this.showRegestraion}/>
       }
       </div>
     );
