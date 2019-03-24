@@ -1,10 +1,14 @@
 :root {
   --white-c: #fff;
   --black-c: 000;
+  --light-violet-c: #4d76a1;
   --violet-c: #6b84a0;
+  --dark-violet-c: #3b5998;
   --light-black-c: #363636;
   --gray-c: #b9b9b9;
   --blue: #2c4aaf;
+  --light-blue-c: #007ab9;
+  --lighter-blue-c: #55acee;
   --border-color: #e0e0e0;
   --to-blue-gradient: linear-gradient(to top, #1d2f9b 0%, #5ea3f0 100%);
   --to-white-gradient: linear-gradient(to top, #5ea3f0 0%, #1d2f9b 100%);
@@ -91,3 +95,19 @@ input::-webkit-contacts-auto-fill-button {
   position: absolute;
   right: 0;
 }
+
+.color-white {
+  color: white;
+}
+
+.welcome-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  padding: 20px;
+  background: var(--to-blue-gradient);
+}
+

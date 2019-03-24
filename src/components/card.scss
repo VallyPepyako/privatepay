@@ -4,16 +4,20 @@
 	width: 90%;
 	margin: 0 auto;
 	position: relative;
+	&__menu-button {
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		background-color: transparent;
+		padding: 0 5px;
+	}
 	&__logo {
-		max-width: 47px;
-		max-height: 40px;
+		width: 45px;
+		height: 45px;
 		margin-right: 45px;
+		background-size: contain;
+		background-repeat: no-repeat;
 		border-radius: 50%;
-		img {
-			width: 100%;
-			height: 100%;
-			border-radius: 50%;
-		}
 	}
 	&__header {
 		display: flex;
@@ -24,7 +28,7 @@
 		font-size: 18px;
 		color: var(--light-black-c);
 	}
-	&__user-info {
+	&__blog-info {
 		color: var(--gray-c);
 		font-size: 15px;
 		font-weight: 400;
@@ -45,6 +49,13 @@
 	}
 	&__body {
 		padding: 0 5px;
+		display: flex;
+		margin-bottom: 30px;
+	}
+	&__picture {
+		max-width: 30%;
+		float: right;
+		margin-right: 20px;
 	}
 	&__text {
 		font-size: 15px;
@@ -52,7 +63,6 @@
 		color: var(--light-black-c);
 		display: inline-block;
 		margin: 0;
-		margin-bottom: 15px;
 	}
 	&__link {
 		text-decoration: none;
@@ -62,82 +72,40 @@
 			opacity: .7;
 		}
 	}
-	&__rate {
+	.voting {
 		display: flex;
 		align-items: center;
-		padding-left: 5px
-	}
-	&__rate-btn {
-		padding: 0;
-		height: 30px;
-		width: 30px;
-		border: none;
-		outline: none;
-		margin-right: 5px;
-		cursor: pointer;
-		background-color: transparent;
-		fill: var(--violet-c);
-		transition: all .3s;
-		&:hover {
-			fill: var(--blue);
-		}
-		&--dislike {
-			position: relative;
-			transform: rotate(180deg);
-		}
-		&::-moz-focus-inner {
-			  border: 0;
-		}
-	}
-	&__num-rate {
-		font-size: 15px;
-		font-weight: 400;
-		color: var(--gray-c);
-		vertical-align: bottom;
-		&:not(:last-of-type) {
-			margin-right: 25px;
-		}
-	}
-	&__menu {
-		outline: none;
-		border: none;
-		height: 15px;
-		width: 15px;
-		background-color: transparent;
-		padding: 0;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		position: absolute;
-		right: 5px;
-		top: 10px;
-		cursor: pointer;
-	}
-	.menu {
-		&__icon {
-			display: inline-block;
-			background-color: var(--gray-c);
-			height: 5px;
-			width: 5px;
-			border-radius: 50%;
-			position: relative;
-			&:after, 
-			&:before {
-				display: inline-block;
-				content: '';
-				position: absolute;
-				height: 5px;
-				width: 5px;
-				border-radius: 50%;
-				background-color: var(--gray-c);
-				left: 50%;
-				transform: translateX(-50%);
+		padding-left: 5px;
+		&__button {
+			padding: 0;
+			height: 30px;
+			width: 30px;
+			border: none;
+			outline: none;
+			margin-right: 5px;
+			cursor: pointer;
+			background-color: transparent;
+			fill: var(--violet-c);
+			transition: all .3s;
+			&:hover {
+				fill: url(#icon-gradient);
 			}
-			&:before {
-				top: -7px;
+			&::-moz-focus-inner {
+				  border: 0;
 			}
-			&:after {
-				bottom: -7px;
+			&--180deg {
+				position: relative;
+				transform: rotate(180deg);
+			}
+		}	
+					
+		&__rate {
+			font-size: 15px;
+			font-weight: 400;
+			color: var(--gray-c);
+			vertical-align: bottom;
+			&:not(:last-of-type) {
+				margin-right: 25px;
 			}
 		}
 	}

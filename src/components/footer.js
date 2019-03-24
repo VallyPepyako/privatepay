@@ -28,7 +28,7 @@ const Footer = () => {
             <nav className="footer__nav">
                 <ul className="footer__nav-list">
                     {pages.map((page, key ) => <li key={key}  className="footer__nav-item">
-                        <NavLink to={"/" + page.link} exact className="footer__nav-link" activeClassName="footer__nav-link--active" aria-label={page.ink}>
+                        <NavLink to={"/" + page.link} exact className="footer__nav-link" activeClassName="footer__nav-link--active" aria-label={page.link}>
                             {page.icon}
                         </NavLink>
                     </li>
