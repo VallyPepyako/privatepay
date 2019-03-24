@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { getClassName } from '../helpers';
 import CommonContext from '../ContextProvider/CommonContext';
 import './header.scss'
+import './burger.css'
 
 const HeaderContextWrapper = (props) => (
 	<CommonContext.Consumer>
@@ -22,9 +23,12 @@ const HeaderContextWrapper = (props) => (
 		 	{userSettingButton && <Link to="/"> ред </Link>}
 			{avatarUrl && <Avatar modifiers="small" avatarUrl={avatarUrl} avatarUrl2x={avatarUrl2x}/>}
 			{!userSettingButton && <h1>{title}</h1>}
-			<button onClick={() => context.state.setNavOpen(true)}>
-        Open sidebar
-      </button>
+			
+			<button onClick={() => context.state.setNavOpen(true)} class="hamburger" type="button">
+				<span class="hamburger-box">
+					<span class="hamburger-inner"></span>
+				</span>
+			</button>
 		</header>
 	)
 }

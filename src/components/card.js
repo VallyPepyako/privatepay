@@ -17,8 +17,8 @@ const Card = ({avatarUrl, cardTitle, cardText, cardPicture, timeOfActivity, numO
 			</div>
 		</div>
 		<div className="card__body">
-		{cardPicture && <img src= {cardPicture} alt="card picture" className="card__picture"/>}
-			<p className="card__text"> { cardText } <a href="#" className="card__link card__link--more">Ещё</a> </p>
+		
+			<p className="card__text"> {cardPicture && <img src= {cardPicture} alt="card picture" className="card__picture"/>} { cardText } <a href="#" className="card__link card__link--more">Ещё</a> </p>
 		</div>
 		<div className="card__voting voting">
 			<button className="button voting__button">

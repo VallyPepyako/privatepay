@@ -4,6 +4,7 @@
 	width: 90%;
 	margin: 0 auto;
 	position: relative;
+	margin-bottom: 20px;
 	&__menu-button {
 		position: absolute;
 		right: 10px;
@@ -53,10 +54,10 @@
 		margin-bottom: 30px;
 	}
 	&__picture {
-		width: 15%;
+		width: 150px;
 		height: auto;
 		margin-right: 20px;
-		align-self: flex-start;
+		float: left;
 	}
 	&__text {
 		font-size: 15px;

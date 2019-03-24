@@ -1,19 +1,39 @@
 .header {
-	position: relative;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: var(--white-c);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 15px;
+	z-index: 1;
+	box-shadow: 0px 6px 7px -2px rgba(147, 147, 147, 0.3);
 	.avatar {
 		margin-left: 0;
+		margin-right: auto;
 	}
 	button {
 		margin-right: 0;
+		margin-left: auto;
 	}
 	h1 {
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		transform: translate(-50%, -50%)
+		transform: translate(-50%, -50%);
+		font-size: 18px;
+	}
+	.hamburger {
+		padding: 5px;
+	}
+	.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before {
+		width: 28px;
+		height: 2px;
+	}
+	.hamburger-box {
+		width: 28px;
+    height: 14px;
 	}
 }
