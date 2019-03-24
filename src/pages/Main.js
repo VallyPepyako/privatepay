@@ -6,9 +6,9 @@ export default class Main extends PureComponent {
   render() {
     return (
       <Fragment>
-      <Header title="Главная"></Header>
+      <Header title="Мои группы"></Header>
       <main>
-        Главная страница
+        
       </main>
       </Fragment>
     );
