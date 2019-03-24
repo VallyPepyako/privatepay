@@ -22,7 +22,7 @@ const pages = [
         icon: <AccountIcon className="footer__nav-icon"/>
     }
 ]
-export const Footer = () => {
+const Footer = () => {
     return (
         <footer className="footer">
             <nav className="footer__nav">
@@ -38,3 +38,4 @@ export const Footer = () => {
         </footer>
     )
 }
+export default Footer

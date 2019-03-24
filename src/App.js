@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
-import main from './pages/Main';
-import groups from './pages/Groups'
-import user from './pages/User'
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Sidebar from "react-sidebar";
 import Login from './containers/Login';
 import Registration from './containers/Registration';
-import { Footer } from './components/footer';
+import Footer from './components/footer';
+import Header from './components/header';
+import Groups from './pages/Groups';
+import User from './pages/User';
+import Main from './pages/Main';
 
 class App extends Component {
   constructor(props) {
@@ -15,7 +16,7 @@ class App extends Component {
     this.state = {
       sidebarOpen: false,
       isUserLogIn: false,
-      isRegistarationActive: false
+      isRegistarationActive: false,
     };
     this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
     this.showRegestraion = this.showRegestraion.bind(this);
@@ -36,7 +37,6 @@ class App extends Component {
   }
   render() {
     const {isUserLogIn, isRegistarationActive} = this.state
-    
     return (
       isUserLogIn ? <Sidebar
         sidebar={<b>Sidebar content</b>}
@@ -45,13 +45,10 @@ class App extends Component {
         pullRight={true}
         styles={{ sidebar: { background: "white" } }}
       >
-      <button onClick={() => this.onSetSidebarOpen(true)}>
-        Open sidebar
-      </button>
       <Router>
-        <Route exact path="/" component={main} />
-        <Route path="/groups" component={groups} />
-        <Route path="/user" component={user} />
+        <Route exact path="/" component={() => <Main /> } />
+        <Route path="/groups" component={() => <Groups /> } />
+        <Route path="/user" component={() => <User/> } />
         <Footer />
       </Router>
     </Sidebar> :

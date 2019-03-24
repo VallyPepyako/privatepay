@@ -1,14 +1,15 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Button } from '../src/components/button';
-import { Footer } from '../src/components/footer';
-import { Card } from '../src/components/card';
-import { Input } from '../src/components/input';
-import { Avatar } from '../src/components/avatar';
+import Button from '../src/components/button';
+import Footer from '../src/components/footer';
+import Card from '../src/components/card';
+import Input from '../src/components/input';
+import Avatar from '../src/components/avatar';
 import { BrowserRouter as Router} from "react-router-dom";
 import '../src/index.scss';
 import profile, {ReactComponent as ProfileLogo} from '../src/static/icons/account.svg'
-import {CardUser} from "../src/components/cardUser";
+import CardUser from "../src/components/cardUser";
+import Header from '../src/components/header';
 
 
 storiesOf('Buttons', module)
@@ -103,7 +104,7 @@ storiesOf('Avatar', module)
         />
     ))
 
-storiesOf('Card User', module)
+storiesOf('cardUser', module)
     .add('simple', () => (
         <CardUser
             avatarUrl="https://via.placeholder.com/32x32"
@@ -112,4 +113,32 @@ storiesOf('Card User', module)
             userLink="./User"
         />
     ))
-
+storiesOf('Header', module)
+    .add('simple', () => (
+        <Router>
+            <Header 
+                title="Главная"
+                avatarUrl="https://via.placeholder.com/32x32"
+                avatarUrl2x="https://via.placeholder.com/64x64"
+                userName="User Name"
+            />
+        </Router>
+    ))
+    .add('Header with Avatar', () => (
+        <Router>
+            <Header 
+                title="Групп нэйм"
+                avatarUrl="https://via.placeholder.com/32x32"
+                avatarUrl2x="https://via.placeholder.com/64x64"
+                userName="User Name"
+            />
+        </Router>
+    ))
+    .add('Header on user page', () => (
+        <Router>
+            <Header 
+                modifiers="user-header"
+                userSettingButton={true}
+            />
+        </Router>
+    ))

@@ -2,7 +2,7 @@ import React from 'react'
 import './card.scss'
 import like, {ReactComponent as LikeIcon} from '../static/icons/like.svg'
 
-export const Card = ({avatarUrl, cardTitle, cardText, cardPicture, timeOfActivity, numOfMembers, like, dislike}) => (
+const Card = ({avatarUrl, cardTitle, cardText, cardPicture, timeOfActivity, numOfMembers, like, dislike}) => (
 	<div className="card">
 		<button className="card__menu menu"><span className="menu__icon"></span></button>
 			<div className="card__header">
@@ -28,3 +28,5 @@ export const Card = ({avatarUrl, cardTitle, cardText, cardPicture, timeOfActivit
 			</div>
 	</div>
 )
+
+export default Card

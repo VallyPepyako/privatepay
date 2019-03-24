@@ -1,13 +1,13 @@
 import React from 'react'
 import './card-user.scss'
-import { Avatar } from './avatar'
+import Avatar from './avatar'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { getClassName } from '../helpers';
 // eslint-disable-next-line
 import infoIcon, {ReactComponent as InfoIcon} from '../static/icons/info.svg'
 
 
-export const CardUser = ({ modifiers, userName, userLink, avatarUrl, avatarUrl2x }) => (
+const CardUser = ({ modifiers, userName, userLink, avatarUrl, avatarUrl2x }) => (
 	<Router>
 	<article className={getClassName('card-user', modifiers)}>
 		<Link to={userLink} className="card-user__link">
@@ -24,3 +24,4 @@ export const CardUser = ({ modifiers, userName, userLink, avatarUrl, avatarUrl2x
 	</article>
 	</Router>
 )
+export default CardUser
