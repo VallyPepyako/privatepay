@@ -1,0 +1,28 @@
+.user-contacts__item {
+	display: flex;
+	align-items: center;
+	padding: 10px 15px;
+	border-bottom: 1px solid var(--border-color);
+}
+.user-contacts__title {
+	margin-right: 20px;
+}
+.user-contacts__value {
+	margin-left: auto;
+	color: var(--gray-c);
+}
+.user-contacts__link {
+	color: var(--gray-c);
+	text-decoration: none;
+
+	&:hover,
+	&:active {
+		color: var(--gray-c);
+	}
+}
+.user-contacts__icon {
+	height: 20px;
+	width: 20px;
+	margin-left: 4px;
+	fill: var(--gray-c);
+}
