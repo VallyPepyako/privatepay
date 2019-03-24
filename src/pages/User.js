@@ -5,7 +5,7 @@ export default class User extends PureComponent {
 	render() {
 		return (
 			<div>
-			<Header title="Юзер" />
+			<Header title="Юзер" userSettingButton={true}/>
 				Страница юзера
 			</div>
 		)

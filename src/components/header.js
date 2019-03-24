@@ -3,6 +3,7 @@ import Avatar from './avatar';
 import { Link } from "react-router-dom";
 import { getClassName } from '../helpers';
 import CommonContext from '../ContextProvider/CommonContext';
+import './header.scss'
 
 const HeaderContextWrapper = (props) => (
 	<CommonContext.Consumer>
@@ -20,7 +21,7 @@ const HeaderContextWrapper = (props) => (
 		<header className={getClassName('header', modifiers)}>
 		 	{userSettingButton && <Link to="/"> ред </Link>}
 			{avatarUrl && <Avatar modifiers="small" avatarUrl={avatarUrl} avatarUrl2x={avatarUrl2x}/>}
-			<h1>{title}</h1>
+			{!userSettingButton && <h1>{title}</h1>}
 			<button onClick={() => context.state.setNavOpen(true)}>
         Open sidebar
       </button>
