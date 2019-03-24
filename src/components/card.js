@@ -1,30 +1,34 @@
-import React from 'react'
-import './card.scss'
-import like, {ReactComponent as LikeIcon} from '../static/icons/like.svg'
+import React from "react"
+import "./card.scss"
+import like, {ReactComponent as LikeIcon} from "../static/icons/like.svg"
+import menu, {ReactComponent as CardMenu} from "../static/icons/card-menu.svg"
 
 export const Card = ({avatarUrl, cardTitle, cardText, cardPicture, timeOfActivity, numOfMembers, like, dislike}) => (
 	<div className="card">
-		<button className="card__menu menu"><span className="menu__icon"></span></button>
-			<div className="card__header">
-				<div className='card__logo'>
-					<img src={avatarUrl} alt="user avatar"></img>
-				</div>
-				<div className="cadr__ueser-info-block">
-					<h3 className='card__title'> { cardTitle } </h3>
-					<span className="card__user-info card__user-info--time-online">{ timeOfActivity }</span>
-					<span className="card__user-info card__user-info--num-of-member">{ numOfMembers }</span>
-				</div>
+		<button className="button card__menu-button">
+			<CardMenu />
+		</button>
+		<div className="card__header">
+			<div className="card__logo" style = {{ backgroundImage : `url( ${ avatarUrl })` }}></div>
+			<div className="card__info">
+				<h3 className="card__title"> { cardTitle } </h3>
+				<span className="card__blog-info">{ timeOfActivity }</span>
+				<span className="card__blog-info">{ numOfMembers }</span>
 			</div>
-			<div className="card__body">
-				<p className="card__text"> { cardText } <a href="#" className="card__link card__link--more">Ещё</a> </p>
-			</div>
-			<div className="card__rate">
-				<button className="card__rate-btn card__rate-btn--like like">
-					<LikeIcon className='like-ikon' />
-				</button><span className="card__num-rate">{ like }</span>
-				<button className="card__rate-btn card__rate-btn--dislike dislike">
-					<LikeIcon className='like-ikon' />
-				</button><span className="card__num-rate">{ dislike }</span>
-			</div>
+		</div>
+		<div className="card__body">
+		{cardPicture && <img src= {cardPicture} alt="card picture" className="card__picture"/>}
+			<p className="card__text"> { cardText } <a href="#" className="card__link card__link--more">Ещё</a> </p>
+		</div>
+		<div className="card__voting voting">
+			<button className="button voting__button">
+				<LikeIcon className="voting__icon" />
+			</button>
+			<span className="card__voting-rate voting__rate">{ like }</span>
+			<button className="button voting__button voting__button--180deg">
+				<LikeIcon className="voting__icon voting__icon--180deg" />
+			</button>
+			<span className="card__voting-rate voting__rate">{ dislike }</span>
+		</div>
 	</div>
 )
