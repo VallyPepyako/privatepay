@@ -38,7 +38,7 @@ const links = [
 	}
 ]
 
-export const SocialBlock = () => {
+ const SocialBlock = () => {
 	return (
 		<ul className="links-block">
 			{links.map((item, index) => <li className={"links-block__item links-block__item--" + item.mod}>
@@ -50,3 +50,4 @@ export const SocialBlock = () => {
 		</ul>
 	)
 }
+export default SocialBlock

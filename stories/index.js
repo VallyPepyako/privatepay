@@ -5,6 +5,7 @@ import Footer from '../src/components/footer';
 import Card from '../src/components/card';
 import Input from '../src/components/input';
 import Avatar from '../src/components/avatar';
+import SocialBlock from '../src/components/socialBlock'
 import { BrowserRouter as Router} from "react-router-dom";
 import '../src/index.scss';
 import profile, {ReactComponent as ProfileLogo} from '../src/static/icons/account.svg'
