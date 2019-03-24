@@ -3,7 +3,7 @@ import main from './pages/Main';
 import groups from './pages/Groups'
 import user from './pages/User'
 
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Sidebar from "react-sidebar";
 import Login from './containers/Login';
 import Registration from './containers/Registration';
@@ -15,8 +15,10 @@ class App extends Component {
     this.state = {
       sidebarOpen: false,
       isUserLogIn: false,
+      isRegistarationActive: false
     };
     this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
+    this.showRegestraion = this.showRegestraion.bind(this);
     this.login = this.login.bind(this);
   }
   onSetSidebarOpen(open) {
@@ -27,8 +29,13 @@ class App extends Component {
       isUserLogIn: true
     })
   }
+  showRegestraion() {
+    this.setState({
+      isRegistarationActive: true
+    })
+  }
   render() {
-    const {isUserLogIn} = this.state
+    const {isUserLogIn, isRegistarationActive} = this.state
     
     return (
       isUserLogIn ? <Sidebar
@@ -49,8 +56,10 @@ class App extends Component {
       </Router>
     </Sidebar> :
       <div className="welcome-screen">
-        <Login login={this.login}/>
-        <Registration />
+      {!isRegistarationActive 
+        ?<Login login={this.login} showRegestraion={this.showRegestraion}/>
+        : <Registration />
+      }
       </div>
     );
   }
