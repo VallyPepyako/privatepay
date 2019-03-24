@@ -1,17 +1,30 @@
 import React from 'react'
 import Avatar from './avatar';
 import { Link } from "react-router-dom";
+import { getClassName } from '../helpers';
+import CommonContext from '../ContextProvider/CommonContext';
 
-export default function Header({ title, avatarUrl, userSettingButton, avatarUrl2x}) {
+const HeaderContextWrapper = (props) => (
+	<CommonContext.Consumer>
+		{(context) => (
+			<Header
+				context={context}
+				{...props} />
+
+		)}
+	</CommonContext.Consumer>
+)
+	const Header = ({modifiers, title, avatarUrl, userSettingButton, avatarUrl2x, context}) => {
+		
 	return (
-		<header>
-			<Link></Link>
+		<header className={getClassName('header', modifiers)}>
 		 	{userSettingButton && <Link to="/"> ред </Link>}
 			{avatarUrl && <Avatar modifiers="small" avatarUrl={avatarUrl} avatarUrl2x={avatarUrl2x}/>}
 			<h1>{title}</h1>
-			<button onClick={() => this.onSetSidebarOpen(true)}>
+			<button onClick={() => context.state.setNavOpen(true)}>
         Open sidebar
       </button>
 		</header>
 	)
 }
+export default HeaderContextWrapper

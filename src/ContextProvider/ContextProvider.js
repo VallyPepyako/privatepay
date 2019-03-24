@@ -3,9 +3,9 @@ import CommonContext from "./CommonContext"
 
 class ContextProvider extends Component {
 	state = {
-		activePageTitle: "Главная",
-		setActivePageTitle: (page) => this.setState({
-			activePageTitle: page
+		isNavOpen: false,
+		setNavOpen: (state) => this.setState({
+			isNavOpen: state
 		}),
 	}
 	render() { 

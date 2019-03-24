@@ -9,13 +9,15 @@ import Header from './components/header';
 import Groups from './pages/Groups';
 import User from './pages/User';
 import Main from './pages/Main';
+import ContextProvider from './ContextProvider/ContextProvider';
+import CommonContext from './ContextProvider/CommonContext';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       sidebarOpen: false,
-      isUserLogIn: false,
+      isUserLogIn: true,
       isRegistarationActive: false,
     };
     this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
@@ -38,20 +40,28 @@ class App extends Component {
   render() {
     const {isUserLogIn, isRegistarationActive} = this.state
     return (
-      isUserLogIn ? <Sidebar
-        sidebar={<b>Sidebar content</b>}
-        open={this.state.sidebarOpen}
-        onSetOpen={this.onSetSidebarOpen}
-        pullRight={true}
-        styles={{ sidebar: { background: "white" } }}
-      >
-      <Router>
-        <Route exact path="/" component={() => <Main /> } />
-        <Route path="/groups" component={() => <Groups /> } />
-        <Route path="/user" component={() => <User/> } />
-        <Footer />
-      </Router>
-    </Sidebar> :
+      isUserLogIn ? 
+      <ContextProvider>
+      <CommonContext.Consumer>
+        {(context) => (
+          <Sidebar
+          sidebar={<b>Sidebar content</b>}
+          open={context.state.isNavOpen}
+          onSetOpen={() => context.state.setNavOpen(false)}
+          pullRight={true}
+          styles={{ sidebar: { background: "white" } }}
+        >
+          <Router>
+            <Route exact path="/" component={() => <Main /> } />
+            <Route path="/groups" component={() => <Groups /> } />
+            <Route path="/user" component={() => <User/> } />
+            <Footer />
+          </Router>
+        </Sidebar>
+        )}
+      </CommonContext.Consumer>
+        
+      </ContextProvider> :
       <div className="welcome-screen">
       {!isRegistarationActive 
         ?<Login login={this.login} showRegestraion={this.showRegestraion}/>
