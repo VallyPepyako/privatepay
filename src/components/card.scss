@@ -53,9 +53,10 @@
 		margin-bottom: 30px;
 	}
 	&__picture {
-		max-width: 30%;
-		float: right;
+		width: 15%;
+		height: auto;
 		margin-right: 20px;
+		align-self: flex-start;
 	}
 	&__text {
 		font-size: 15px;
@@ -87,15 +88,15 @@
 			background-color: transparent;
 			fill: var(--violet-c);
 			transition: all .3s;
+			&--180deg {
+				position: relative;
+				transform: rotate(180deg);
+			}
 			&:hover {
 				fill: url(#icon-gradient);
 			}
 			&::-moz-focus-inner {
-				  border: 0;
-			}
-			&--180deg {
-				position: relative;
-				transform: rotate(180deg);
+				border: 0;
 			}
 		}	
 					
